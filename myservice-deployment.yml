@@ -13,7 +13,9 @@ spec:
         app: myservice
     spec:
       containers:
-        - image: sirinamarwa/sirine:2
+        - name: myservice
+          image: sirinamarwa/sirine:2
           imagePullPolicy: IfNotPresent
-          name: myservice
+          ports:
+            - containerPort: 8080
       restartPolicy: Always
